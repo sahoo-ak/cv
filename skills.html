@@ -12,8 +12,11 @@
     <!-- <header>
         <h1>Skills</h1>
     </header> -->
+    
+    <!-- Hide/Show Button for Navigation -->
+    <button id="toggle-nav" class="toggle-nav-button">☰ Menu</button>
 
-    <nav>
+    <nav id="main-nav">
         <a href="index.html">Home</a>
         <a href="education.html">Education</a>
         <a href="publications.html">Publications</a>
@@ -33,6 +36,22 @@
             <!-- Add more skills as needed -->
         </ul>
     </section>
+
+    <script>
+        // JavaScript to toggle the visibility of the navigation menu
+        const toggleButton = document.getElementById('toggle-nav');
+        const nav = document.getElementById('main-nav');
+
+        toggleButton.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+            // Change button text when menu is hidden
+            if (nav.classList.contains('hidden')) {
+                toggleButton.innerHTML = '☰ Show Menu';
+            } else {
+                toggleButton.innerHTML = '☰ Hide Menu';
+            }
+        });
+    </script>
 
 </body>
 </html>
