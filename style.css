@@ -27,6 +27,11 @@ nav {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    position: fixed; /* Keep the navigation fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure the navigation is above other elements */
 }
 
 nav a {
