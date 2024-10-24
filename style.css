@@ -164,27 +164,6 @@ button:hover {
     background-color: #005f99;
 }
 
-/* Responsive Design: For Larger Screens (Laptops & Desktops) */
-@media screen and (min-width: 1024px) {
-    nav a {
-        margin: 0 20px; /* Larger spacing between navigation links on bigger screens */
-        font-size: 1.2rem; /* Increase font size slightly */
-    }
-
-    section {
-        max-width: 1300px; /* Wider section on larger screens */
-        padding: 30px 60px; /* More padding to balance larger screen space */
-        font-size: 1.0rem; /* Increase font size for readability */
-    }
-
-    h2 {
-        font-size: 1.5rem; /* Slightly larger heading */
-    }
-
-    h3 {
-        font-size: 1.2rem; /* Larger subheading for readability */
-    }
-}
 
 /* Responsive Design: For Smaller Screens (Tablets & Phones) */
 @media screen and (max-width: 768px) {
