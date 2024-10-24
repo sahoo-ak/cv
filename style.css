@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Light blue background */
+    margin: 0;
+}
+
+header {
+    background-color: #007acc; /* Darker blue for header */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    padding: 10px;
+    background-color: #00bcd4; /* Mid-blue for navigation */
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Style the active page link */
+nav a.active {
+    background-color: #007acc; /* Darker blue to indicate active link */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
