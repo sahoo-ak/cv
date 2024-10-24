@@ -1,20 +1,24 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e0f7fa; /* Light blue background */
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Lighter background for better contrast */
     margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Increased line height for better readability */
 }
 
 header {
     background-color: #007acc; /* Darker blue for header */
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for a lifted effect */
 }
 
 nav {
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     background-color: #00bcd4; /* Mid-blue for navigation */
+    border-bottom: 2px solid #007acc; /* Subtle border below navigation */
 }
 
 nav a {
@@ -22,10 +26,13 @@ nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: #007acc; /* Change background on hover */
+    padding: 5px 10px; /* Add padding on hover */
+    border-radius: 5px; /* Rounded corners on hover */
 }
 
 /* Style the active page link */
@@ -33,4 +40,27 @@ nav a.active {
     background-color: #007acc; /* Darker blue to indicate active link */
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+section {
+    max-width: 800px; /* Center the content */
+    margin: 20px auto; /* Center alignment with margin */
+    padding: 20px; /* Padding around section content */
+    background-color: white; /* White background for readability */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+h2 {
+    color: #007acc; /* Dark blue for headings */
+    border-bottom: 2px solid #00bcd4; /* Underline for headings */
+    padding-bottom: 10px; /* Space below heading */
+}
+
+ul {
+    padding-left: 20px; /* Indent for list items */
+}
+
+ul li {
+    margin-bottom: 10px; /* Space between list items */
 }
