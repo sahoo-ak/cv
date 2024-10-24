@@ -121,13 +121,13 @@ h2 {
     padding-bottom: 10px;
     font-size: 2rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
 }
 
 h3 {
     margin-top: 0;
     color: #333;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
 }
 
 p {
@@ -141,7 +141,7 @@ footer {
     padding: 20px;
     background-color: #005f99;
     color: white;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -171,15 +171,15 @@ button:hover {
     section {
         max-width: 1300px; /* Wider section on larger screens */
         padding: 30px 60px; /* More padding to balance larger screen space */
-        font-size: 1.2rem; /* Increase font size for readability */
+        font-size: 1.0rem; /* Increase font size for readability */
     }
 
     h2 {
-        font-size: 2.2rem; /* Slightly larger heading */
+        font-size: 1.5rem; /* Slightly larger heading */
     }
 
     h3 {
-        font-size: 1.8rem; /* Larger subheading for readability */
+        font-size: 1.2rem; /* Larger subheading for readability */
     }
 }
 
@@ -197,11 +197,11 @@ button:hover {
     }
 
     h2 {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
     }
 
     h3 {
-        font-size: 1.3rem;
+        font-size: 1.0rem;
     }
 }
 
