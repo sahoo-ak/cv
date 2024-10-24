@@ -31,6 +31,33 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+/* Button to toggle navigation visibility */
+.toggle-nav-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #007acc;
+    color: white;
+    padding: 8px 12px;
+    font-size: 1rem; /* Reduced button font size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1100;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-nav-button:hover {
+    background-color: #005f99;
+}
+
+/* Hidden class to hide the navigation */
+.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
 }
 
 nav a {
@@ -51,6 +78,12 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+nav a.active {
+    background-color: #007acc;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
 /* Section Styles */
 section {
     max-width: 1200px; /* Increased max-width for larger screens */
@@ -61,6 +94,13 @@ section {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     font-size: 1.1rem;
     line-height: 1.7;
+}
+
+/* Styling for lists */
+ol {
+    margin-left: 20px;
+    padding-left: 10px;
+    font-size: 0.95rem; /* Reduced font size for list items */
 }
 
 .degree {
@@ -176,5 +216,21 @@ button:hover {
 
     header h1 {
         font-size: 2rem;
+    }
+}
+
+/* Additional responsive design adjustments */
+@media screen and (max-width: 768px) {
+    nav a {
+        margin: 0 8px;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .toggle-nav-button {
+        font-size: 0.9rem;
     }
 }
