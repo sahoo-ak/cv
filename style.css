@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #f0f4f8; /* Lighter background for better contrast */
     margin: 0;
     padding: 0;
@@ -51,16 +51,25 @@ section {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
+.degree {
+    margin-bottom: 20px; /* Space between degree entries */
+    padding: 15px; /* Padding within each degree section */
+    border-left: 4px solid #007acc; /* Left border to highlight each degree */
+    background-color: #f9f9f9; /* Light gray background for degree sections */
+    border-radius: 5px; /* Slightly rounded corners for degree sections */
+}
+
 h2 {
     color: #007acc; /* Dark blue for headings */
     border-bottom: 2px solid #00bcd4; /* Underline for headings */
     padding-bottom: 10px; /* Space below heading */
 }
 
-ul {
-    padding-left: 20px; /* Indent for list items */
+h3 {
+    margin-top: 0; /* Remove top margin for degree titles */
+    color: #333; /* Darker text color for degree titles */
 }
 
-ul li {
-    margin-bottom: 10px; /* Space between list items */
+p {
+    margin: 5px 0; /* Space between paragraphs */
 }
