@@ -88,13 +88,13 @@ body {
 
 .hero-section {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Aligns content to the top */
     justify-content: center;
-    height: 70vh;
+    height: 80vh;
     background: #f0f4f8;
     color: rgb(30, 27, 27);
     text-align: center;
-    padding: 0 20px;
+    padding-top: 120px;
 }
 
 .hero-content {
@@ -104,7 +104,7 @@ body {
 
 .hero-content h1 {
     font-size: 3em;
-    margin: 0 0 10px 0;
+    margin: 0 0 0 0;
     font-weight: 700;
 }
 
@@ -121,6 +121,7 @@ body {
     font-weight: 600;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    margin-inline: 50px;
 }
 
 .btn-primary:hover {
@@ -175,7 +176,7 @@ h2 {
     margin-bottom: 20px;
     padding: 15px;
     /* border-left: 5px solid #007acc; */
-    background-color: #f4f8fb;
+    background-color: #f8fafc;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -185,7 +186,7 @@ h2 {
     padding: 15px 15px;
     /* border-left: 5px solid #007acc; */
     /* max-width: 600px; */
-    background-color: #f4f8fb;
+    background-color: #f8fafc;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     flex: 1 1 50%;
@@ -194,25 +195,34 @@ h2 {
 }
 
 /* Contact and Social Media Section */
-.contact-section {
-    padding: 40px 20px;
+.about-section {
+    /* padding: 40px 20px; */
     text-align: center;
-    background-color: #fff;
-    margin: 30px auto;
-    max-width: 600px;
+    color: #fff;
+    background-color: #6a11cb;
+    margin: 10px auto;
+    /* max-width: 600px; */
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.contact-section a {
-    color: #6a11cb;
+.about-section a {
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-.contact-section a:hover {
-    color: #2575fc;
+.about-section a:hover {
+    color: #25fc54;
+}
+
+.about {
+    flex: 1 1 50%;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 /* Button Styles */
