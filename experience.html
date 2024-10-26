@@ -26,6 +26,8 @@
         <a href="awards.html">Awards</a>
     </nav>
 
+    <section class="blank-section"></section>
+
     <section>
         <h2>Research Visits</h2>
         <!-- <p>Details of my teaching experience, including courses taught and mentoring roles:</p> -->
@@ -47,6 +49,7 @@
         </ul>
     </section>
 
+    <!-- JavaScript for Toggle Navigation -->
     <script>
         // JavaScript to toggle the visibility of the navigation menu
         const toggleButton = document.getElementById('toggle-nav');
@@ -63,5 +66,18 @@
         });
     </script>
 
+        <!-- JavaScript for Scroll Effect -->
+        <script>
+            window.addEventListener('scroll', function () {
+                const nav = document.getElementById('main-nav');
+                if (window.scrollY > 50) {
+                    nav.classList.add('opaque-nav');
+                } else {
+                    nav.classList.remove('opaque-nav');
+                }
+            });
+        </script>
+
 </body>
+
 </html>

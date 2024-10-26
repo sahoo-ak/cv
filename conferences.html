@@ -26,6 +26,8 @@
         <a href="awards.html">Awards</a>
     </nav>
 
+    <section class="blank-section"></section>
+    
     <section>
         <h2>Conferences / Schools</h2>
         <p>Below are the conferences where I have presented my research:</p>
@@ -71,6 +73,24 @@
         </ul>
     </section>
 
+    
+    <section>
+        <h2>Conference Series</h2>
+        
+        <ol>
+            <li class="publication">
+                Nidhi Sinha, <strong>Aloka Kumar Sahoo</strong> and Bobby Antony,
+                "Electron and positron scattering from pyridine", 
+                <em>Journal of Physics: Conference Series</em>,  
+                <a href="https://doi.org/10.1088/1742-6596/1412/22/222009" target="_blank">
+                    <strong>1412(22)</strong> 222009 (2020)</a>.
+            </li>
+        </ol>
+
+    </section>
+
+    
+    <!-- JavaScript for Toggle Navigation -->
     <script>
         // JavaScript to toggle the visibility of the navigation menu
         const toggleButton = document.getElementById('toggle-nav');
@@ -87,5 +107,18 @@
         });
     </script>
 
+    <!-- JavaScript for Scroll Effect -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('opaque-nav');
+            } else {
+                nav.classList.remove('opaque-nav');
+            }
+        });
+    </script>
+
 </body>
+
 </html>

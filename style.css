@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f0f4f8;
@@ -5,44 +6,67 @@ body {
     padding: 0;
     line-height: 1.8;
     color: #333;
+  }
+  
+  /* Navigation Bar at the Top (fixed positioning) */
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.0); /* Semi-transparent black background */
+    color: #ff6b6b;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+  
+  nav a {
+    display: flex;
+    justify-content: flex-end;
+    color: black;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ff6b6b;
+  }
+  
+  nav a.active {
+    color: #b32626; /* Darker blue on hover */
+    border-radius: 5px;
 }
 
-/* Header Section */
-header {
+/* Opaque Navigation Bar During Scroll */
+.opaque-nav {
+    background-color: #f0f4f8; /* Opaque blue when scrolled */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+  
+  /* Header and Hero Section */
+  header {
     background: linear-gradient(to right, #005f99, #007acc);
     color: white;
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); */
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-/* Navigation Styles */
-nav {
-    text-align: center;
-    padding: 10px; /* Reduced padding to maximize space */
-    background-color: white;
-    border-bottom: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: transform 0.3s ease;
-}
-
+    margin-top: 60px; /* Adjust this value to match the navigation bar height */
+  }
+  
 /* Button to toggle navigation visibility */
 .toggle-nav-button {
     position: fixed;
     top: 17px;
     left: 10px;
-    background-color: #005f99;
-    color: white;
+    background-color: #f0f4f8;
+    color: black;
     padding: 8px 12px;
     font-size: 1rem; /* Reduced button font size */
     border: none;
@@ -53,7 +77,7 @@ nav {
 }
 
 .toggle-nav-button:hover {
-    background-color: #005f99;
+    background-color: #89949e;
 }
 
 /* Hidden class to hide the navigation */
@@ -62,40 +86,55 @@ nav {
     transition: transform 0.3s ease;
 }
 
-nav a {
-    margin: 0 12px; /* Reduced margin to fit more links on one line */
-    text-decoration: none;
-    color: #005f99;
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    background: #f0f4f8;
+    color: rgb(30, 27, 27);
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin: 0 0 20px 0;
+}
+
+.btn-primary {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
     font-weight: 600;
-    font-size: 1.1rem;
-    display: inline-block;
-    padding: 8px 12px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-    color: #f0f4f8; /* Darker blue on hover */
-    background-color: #005f99; /* Light background on hover */
-    padding: 8px 12px;
-    border-radius: 5px;
-    transform: scale(1.05);
-}
-
-nav a.active {
-    color: #f0f4f8; /* Darker blue on hover */
-    background-color: #005f99; /* Light background on hover */
-    padding: 4px 8px;
-    border-radius: 5px;
+.btn-primary:hover {
+    background-color: #e84141;
 }
 
 /* Section Styles */
 section {
-    max-width: 1200px; /* Increased max-width for larger screens */
-    margin: 30px auto; /* Center the content */
-    padding: 20px 40px; /* Reduced padding */
-    background-color: white;
+    /* max-width: 1200px; */
+    margin: 10px auto;
+    padding: 10px 40px;
+    background-color: #f0f4f8;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
     font-size: 1.1rem;
     line-height: 1.7;
 }
@@ -107,58 +146,73 @@ ol {
     font-size: 1.1rem; /* Reduced font size for list items */
 }
 
-a {
-    text-decoration: none;
-  }
-
-.degree {
-    margin-bottom: 20px;
-    padding: 15px;
-    border-left: 5px solid #007acc;
-    background-color: #f4f8fb;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.publication {
-    margin-bottom: 20px;
-    padding: 15px;
-    border-left: 5px solid #007acc;
-    background-color: #f4f8fb;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-/* Heading Styles */
 h2 {
-    color: #007acc;
-    border-bottom: 2px solid #00bcd4;
+    color: rgb(30, 27, 27);
+    /* border-bottom: 2px solid #00bcd4; */
     padding-bottom: 10px;
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     text-align: center;
 }
 
-h3 {
-    margin-top: 0;
-    color: #333;
-    font-size: 1.0rem;
-}
-
-p {
-    margin: 8px 0;
-    color: #555;
-}
-
-/* Footer (optional if added) */
-footer {
+.degree-section {
+    /* max-width: 1200px; */
+    margin: 20px auto;
+    padding: 10px 40px;
+    background-color: #f0f4f8;
+    border-radius: 12px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+    font-size: 1.1rem;
+    line-height: 1.7;
     text-align: center;
-    padding: 20px;
-    background-color: #005f99;
-    color: white;
-    font-size: 0.8rem;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Degree and Publication Boxes */
+.degree, .publication {
+    margin-bottom: 20px;
+    padding: 15px;
+    /* border-left: 5px solid #007acc; */
+    background-color: #f4f8fb;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.degree1 {
+    margin-bottom: 20px;
+    padding: 15px 15px;
+    /* border-left: 5px solid #007acc; */
+    /* max-width: 600px; */
+    background-color: #f4f8fb;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    flex: 1 1 50%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Contact and Social Media Section */
+.contact-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-section a:hover {
+    color: #2575fc;
 }
 
 /* Button Styles */
@@ -177,29 +231,24 @@ button:hover {
     background-color: #005f99;
 }
 
-/* Responsive Design: For Larger Screens (Laptops & Desktops) */
-@media screen and (min-width: 1024px) {
+/* Responsive Design */
+/* @media screen and (min-width: 1024px) {
     nav a {
-        margin: 0 20px; /* Larger spacing between navigation links on bigger screens */
-        font-size: 1.2rem; /* Increase font size slightly */
+        margin: 0 20px;
+        font-size: 1.2rem;
     }
 
     section {
-        max-width: 1300px; /* Wider section on larger screens */
-        padding: 30px 60px; /* More padding to balance larger screen space */
-        font-size: 1.0rem; /* Increase font size for readability */
+        max-width: 1300px;
+        padding: 30px 60px;
+        font-size: 1.1rem;
     }
 
     h2 {
-        font-size: 1.5rem; /* Slightly larger heading */
+        font-size: 1.5rem;
     }
+} */
 
-    h3 {
-        font-size: 1.2rem; /* Larger subheading for readability */
-    }
-}
-
-/* Responsive Design: For Smaller Screens (Tablets & Phones) */
 @media screen and (max-width: 768px) {
     nav a {
         margin: 0 10px;
@@ -213,16 +262,12 @@ button:hover {
 
     section {
         padding: 15px;
-        max-width: 95%; /* Make section almost full-width on small screens */
+        max-width: 95%;
         font-size: 1rem;
     }
 
     h2 {
         font-size: 1.2rem;
-    }
-
-    h3 {
-        font-size: 1.0rem;
     }
 }
 
@@ -236,34 +281,44 @@ button:hover {
         padding: 15px;
         font-size: 0.95rem;
     }
-
-    header h1 {
-        font-size: 2rem;
-    }
 }
 
-/* Social links container */
+.blank-section {
+    margin: 40px auto;
+    background-color: #f0f4f8;
+    border-radius: 12px;
+}
+
+.social-section {
+    /* max-width: 1200px; */
+    margin: 40px auto;
+    background-color: #f0f4f8;
+    border-radius: 12px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Social Links */
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 50px; /* Space between logos */
+    gap: 20px;
     padding: 20px 0;
 }
 
-/* Social logos */
 .social-logo {
-    width: 40px; /* Adjust size as needed */
+    width: 40px;
     height: 40px;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hover effect */
 .social-logo:hover {
-    transform: scale(1.1); /* Slightly increase size on hover */
-    opacity: 0.8; /* Dim slightly on hover */
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
-/* Social logos */
+/* Skills page */
 .program-logo {
     width: auto; /* Adjust size as needed */
     height: 150px;
