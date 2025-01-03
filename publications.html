@@ -58,7 +58,7 @@
                 "Computation of effective collision strengths for plasma applications using JAC." 
                 <em>European Physical Journal Plus</em>,  
                 <a href="https://doi.org/10.1140/epjp/s13360-024-05747-2"> 
-                    <strong>00</strong> (2024)</a>.
+                    <strong>139</strong> 986 (2024)</a>. <a href="#" onclick="accessPDF(event, 'publications/Sahoo_2024_EPJPlus.pdf')" class="btn-file">PDF</a>
             </li>
 
             <li class="publication">
@@ -66,7 +66,7 @@
                 "Electron impact excitation of bismuth." 
                 <em>Physica Scripta</em>, 
                 <a href="https://doi.org/10.1088/1402-4896/ad6f51" target="_blank">
-                    <strong>99(9)</strong> 095410 (2024)</a>.
+                    <strong>99(9)</strong> 095410 (2024)</a>. <a href="#" onclick="accessPDF(event, 'publications/Sahoo_2024_Physica_Scripta.pdf')" class="btn-file">PDF</a>
             </li>
 
             <li class="publication">
@@ -74,7 +74,7 @@
                 "Merits of atomic cascade computations." 
                 <em>European Physical Journal D</em>, 
                 <a href="https://doi.org/10.1140/epjd/s10053-024-00865-z" target="_blank">
-                    <strong>78(6)</strong> 75 (2024)</a>.
+                    <strong>78(6)</strong> 75 (2024)</a>. <a href="#" onclick="accessPDF(event, 'publications/Fritzsche_2024_epjd.pdf')" class="btn-file">PDF</a>
             </li class="publication">
 
             <li class="publication">
@@ -82,7 +82,7 @@
                 "Electron-Impact Excitation of the λ190.8 nm and λ179.9 nm Intercombination Lines in the Tl+ Ion." 
                 <em>Atoms</em>, 
                 <a href="https://doi.org/10.3390/atoms10040136" target="_blank">
-                    <strong>10(4)</strong> 136 (2022)</a>.
+                    <strong>10(4)</strong> 136 (2022)</a>. <a href="#" onclick="accessPDF(event, 'publications/Gomonai_2022_atoms.pdf')" class="btn-file">PDF</a>
             </li>
 
             <li class="publication">
@@ -90,15 +90,15 @@
                 "Electron impact excitation of the Tl+ ion: resonance and cascade transitions." 
                 <em>Journal of Physics B: Atomic, Molecular and Optical Physics</em>,  
                 <a href="https://doi.org/10.1088/1361-6455/ac7924" target="_blank">
-                    <strong>55</strong> 165203 (2022)</a>.
+                    <strong>55</strong> 165203 (2022)</a>. <a href="#" onclick="accessPDF(event, 'publications/Roman_2022_JPhysB.pdf')" class="btn-file">PDF</a>
             </li>
 
             <li class="publication">
                 <strong>Aloka Kumar Sahoo</strong> and Lalita Sharma,
-                "Electron Impact Excitation of Extreme Ultra-Violet Transitions in Xe7+ – Xe10+ Ions." 
+                "Electron Impact Excitation of Extreme Ultra-Violet Transitions in Xe7+ - Xe10+ Ions." 
                 <em>Atoms</em>, 
                 <a href="https://doi.org/10.3390/atoms9040076" target="_blank">
-                    <strong>9(4)</strong> 76 (2021)</a>.
+                    <strong>9(4)</strong> 76 (2021)</a>. <a href="#" onclick="accessPDF(event, 'publications/Sahoo_2021_atoms.pdf')" class="btn-file">PDF</a>
             </li>
 
             <li class="publication">
@@ -106,7 +106,19 @@
                 "Positron Scattering from Pyridine and Pyrimidine." 
                 <em>Journal of Physics B: Atomic, Molecular and Optical Physics</em>,  
                 <a href="https://doi.org/10.1021/acs.jpca.0c02575" target="_blank">
-                    <strong>25</strong> 5147 (2020)</a>.
+                    <strong>25</strong> 5147 (2020)</a>. <a href="#" onclick="accessPDF(event, 'publications/Sinha-2020-jpca.pdf')" class="btn-file">PDF</a>
+            </li>
+        </ol>
+
+    </section>
+
+    <section>
+        <h2>Preprint(s)</h2>
+        
+        <ol>
+            <li class="publication">
+                S. Strnat, J. Sommerfeldt, <strong>A. K. Sahoo</strong>, L. Sharma, A. Surzhykov, 
+                "Inelastic scattering of vortex electrons beyond the Born approximation" <a href="https://arxiv.org/abs/2412.08246" target="_blank">arXiv:2412.08246</a>.
             </li>
         </ol>
 
@@ -151,6 +163,21 @@
                 nav.classList.remove('opaque-nav');
             }
         });
+    </script>
+
+    <!-- JavaScript for password -->
+    <script>
+        function accessPDF(event, pdfUrl) {
+            event.preventDefault(); // Prevent the default click action of the link
+            const password = prompt("Please enter the password or email me (aloka_s@ph.iitr.ac.in) to access this file:");
+
+            // Replace 'getpdf' with your desired password
+            if (password === "getpdf") {
+                window.open(pdfUrl, "_blank"); // Opens the PDF file in a new tab
+            } else {
+                alert("Incorrect password! Access denied.");
+            }
+        }
     </script>
 
 </body>
