@@ -139,22 +139,6 @@ margin-top: 60px; /* Adjust this value to match the navigation bar height */
     transition: transform 0.3s ease;
 }
 
-/* Media Queries for Responsiveness */
-@media screen and (max-width: 768px) {
-    /* Show left navigation bar for small screens */
-    nav.top-nav {
-        display: none; /* Hide top navigation bar */
-    }
-
-    nav.left-nav {
-        display: block; /* Show left navigation bar */
-    }
-
-    .toggle-nav-button {
-        display: block; /* Show toggle button */
-    }
-}
-
 /* subscript */
 sub {
     font-size: 0.8em;  /* Make the subscript smaller */
@@ -392,40 +376,6 @@ button:hover {
     }
 } */
 
-@media screen and (max-width: 768px) {
-    nav a {
-        margin: 0 10px;
-        font-size: 1rem;
-        display: block;
-    }
-
-    .toggle-nav-button {
-        font-size: 0.9rem;
-    }
-
-    section {
-        padding: 15px;
-        max-width: 95%;
-        font-size: 1rem;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    section {
-        padding: 15px;
-        font-size: 0.95rem;
-    }
-}
-
 .blank-section {
     margin: 40px auto;
     background-color: #f0f4f8;
@@ -468,4 +418,64 @@ button:hover {
     width: auto; /* Adjust size as needed */
     height: 150px;
     transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+.social-logo:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    nav.top-nav {
+        display: none; /* Hide top navigation bar */
+    }
+
+    nav.left-nav {
+        display: block; /* Show left navigation bar */
+    }
+
+    .toggle-nav-button {
+        display: block; /* Show toggle button */
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 1rem;
+        display: block;
+    }
+
+    .toggle-nav-button {
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 15px;
+        max-width: 95%;
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .program-logo {
+        max-height: 100px; /* Adjust max-height for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+
+    .program-logo {
+        max-height: 80px; /* Further adjust max-height for very small screens */
+    }
 }
