@@ -155,6 +155,18 @@ margin-top: 60px; /* Adjust this value to match the navigation bar height */
     }
 }
 
+/* subscript */
+sub {
+    font-size: 0.8em;  /* Make the subscript smaller */
+    vertical-align: sub;  /* Align it to the bottom */
+}
+
+/* superscript */
+sup {
+    font-size: 0.8em;  /* Make the superscript smaller */
+    vertical-align: super;  /* Align it to the top */
+}
+
 .hero-section {
     display: flex;
     align-items: flex-start; /* Aligns content to the top */
