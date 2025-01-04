@@ -8,8 +8,8 @@ body {
     color: #333;
   }
   
-  /* Navigation Bar at the Top (fixed positioning) */
-  nav {
+/* Top Navigation Bar (Large Screens) */
+nav.top-nav {
     display: flex;
     justify-content: flex-end;
     width: 100%;
@@ -23,7 +23,7 @@ body {
     transition: transform 0.3s ease;
   }
   
-  nav a {
+  nav.top-nav a {
     display: flex;
     justify-content: flex-end;
     color: black;
@@ -33,35 +33,88 @@ body {
     transition: color 0.3s ease;
   }
   
-  nav a:hover {
+  nav.top-nav a:hover {
     color: #ff6b6b;
   }
   
-  nav a.active {
+  nav.top-nav a.active {
     color: #b32626; /* Darker blue on hover */
     border-radius: 5px;
 }
 
 /* Opaque Navigation Bar During Scroll */
-.opaque-nav {
+nav.top-nav.opaque-nav {
     background-color: #f0f4f8; /* Opaque blue when scrolled */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
+
+/* Left Navigation Bar (Small Screens) */
+nav.left-nav {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background-color: #f0f4f8; /* Opaque background */
+    color: #ff6b6b;
+    padding-top: 60px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: left; /* Align text to the left border */
+}
+
+nav.left-nav a {
+    display: block; /* Changed to block to align text to the left */
+    color: black;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.0); /* Semi-transparent black background */
+}
+
+nav.left-nav a:hover {
+    color: #ff6b6b;
+}
+
+nav.left-nav a.active {
+    color: #b32626; /* Darker blue on hover */
+    border-radius: 5px;
+}
+
+/* Left Navigation Bar Open State */
+nav.left-nav.open {
+    display: block; /* Show when toggled */
+    transform: translateX(0); /* Slide in */
+}
+
+nav.left-nav {
+    transform: translateX(-250px); /* Slide out by default */
+    transition: transform 0.3s ease;
+}
+
+/* Opaque Navigation Bar During Scroll */
+nav.left-nav.opaque-nav {
+    background-color: #f0f4f8;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
   
-  /* Header and Hero Section */
-  header {
-    background: linear-gradient(to right, #005f99, #007acc);
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); */
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-top: 60px; /* Adjust this value to match the navigation bar height */
-  }
+/* Header and Hero Section */
+header {
+background: linear-gradient(to right, #005f99, #007acc);
+color: white;
+padding: 20px 0;
+text-align: center;
+/* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); */
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+margin-top: 60px; /* Adjust this value to match the navigation bar height */
+}
   
 /* Button to toggle navigation visibility */
 .toggle-nav-button {
+    display: none;
     position: fixed;
     top: 17px;
     left: 10px;
@@ -84,6 +137,22 @@ body {
 .hidden {
     transform: translateY(-100%);
     transition: transform 0.3s ease;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Show left navigation bar for small screens */
+    nav.top-nav {
+        display: none; /* Hide top navigation bar */
+    }
+
+    nav.left-nav {
+        display: block; /* Show left navigation bar */
+    }
+
+    .toggle-nav-button {
+        display: block; /* Show toggle button */
+    }
 }
 
 .hero-section {
