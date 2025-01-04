@@ -99,7 +99,23 @@ nav.left-nav.opaque-nav {
     background-color: #f0f4f8;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-  
+
+/* Page Title */
+.page-title {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    width: 100%; /* Adjust to match the left navigation width */
+    /* background-color: #f0f4f8; */
+    color: #b32626;
+    padding: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 1000;
+    text-align: center;
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); */
+}
+
 /* Header and Hero Section */
 header {
 background: linear-gradient(to right, #005f99, #007acc);
@@ -358,24 +374,6 @@ button:hover {
     background-color: #005f99;
 }
 
-/* Responsive Design */
-/* @media screen and (min-width: 1024px) {
-    nav a {
-        margin: 0 20px;
-        font-size: 1.2rem;
-    }
-
-    section {
-        max-width: 1300px;
-        padding: 30px 60px;
-        font-size: 1.1rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-} */
-
 .blank-section {
     margin: 40px auto;
     background-color: #f0f4f8;
@@ -426,6 +424,23 @@ button:hover {
 }
 
 /* Media Queries for Responsiveness */
+/* @media screen and (min-width: 1024px) {
+    nav a {
+        margin: 0 20px;
+        font-size: 1.2rem;
+    }
+
+    section {
+        max-width: 1300px;
+        padding: 30px 60px;
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+} */
+ 
 @media screen and (max-width: 768px) {
     nav.top-nav {
         display: none; /* Hide top navigation bar */
@@ -437,6 +452,10 @@ button:hover {
 
     .toggle-nav-button {
         display: block; /* Show toggle button */
+    }
+
+    nav.left-nav + .page-title {
+        display: block; /* Show when left navigation is open */
     }
 
     nav a {
@@ -462,9 +481,23 @@ button:hover {
     .program-logo {
         max-height: 100px; /* Adjust max-height for smaller screens */
     }
+
+    .degree1 {
+        flex: 1 1 100%; /* Adjust to single column */
+    }
+
+    .btn-primary {
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        margin-inline: 20px; /* Reduce margin for smaller screens */
+    }
 }
 
 @media screen and (max-width: 480px) {
+    nav.left-nav + .page-title {
+        display: block; /* Show when left navigation is open */
+    }
+
     nav a {
         display: block;
         margin: 10px 0;
@@ -477,5 +510,15 @@ button:hover {
 
     .program-logo {
         max-height: 80px; /* Further adjust max-height for very small screens */
+    }
+
+    .degree1 {
+        flex: 1 1 100%; /* Adjust to single column */
+    }
+
+    .btn-primary {
+        padding: 8px 15px; /* Further adjust padding for very small screens */
+        font-size: 0.8rem; /* Further adjust font size for very small screens */
+        margin-inline: 10px; /* Further reduce margin for very small screens */
     }
 }
